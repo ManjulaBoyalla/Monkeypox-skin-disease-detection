@@ -1,1 +1,0 @@
-# Monkeypox-skin-disease-detection
