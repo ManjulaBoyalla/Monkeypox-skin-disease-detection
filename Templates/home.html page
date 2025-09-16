@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Monkeypox_Diagnosis_With_Interpretable_Deep_Learning </title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/templatemo-style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body style="padding-top: 56px; background-color: rgb(226, 226, 226)">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film mr-2">Monkeypox Diagnosis</i>
+                
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="color: red" class="nav-link nav-link-1" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-2" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-2" href="{% url 'upload' %}">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-4" href="{% url 'index' %}">Logout</a>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+    </nav>
+    
+
+    {% block content %}
+    <img style="height: auto; width: 100%;" src="/static/images/background.jpg">
+        <center>
+            <h1 style="color:white; margin-top: -700px; font-weight: 1000px; font-family:'Courier New', Courier, monospace; font-size: 50px;"><b>WELCOME!</b></h1><br>
+            <h3 style="color:white; font-family:'Courier New', Courier, monospace; font-size: 30px;"><b>Monkeypox Diagnosis With Interpretable Deep Learning</b></h3>
+        </center>
+    {% endblock %}
+
+    {% if message %}
+        <script>
+            alert("{{ message }}")        
+        </script>
+    {% endif %}
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+    </script>
+    
+    
+    {% block script %}
+    {% endblock %}
+
+</body>
+</html>
